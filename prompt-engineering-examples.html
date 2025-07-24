@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Engineering Examples | DataPromptly</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container nav-container">
+            <div class="logo-container">
+                <img src="https://img.icons8.com/fluency/96/artificial-intelligence.png" alt="DataPromptly Logo" class="logo">
+                <div class="logo-text">
+                    <h1>DataPromptly</h1>
+                    <p class="tagline">Smarter Data. Better Prompts. Faster Results.</p>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    
+                    <li class="dropdown">
+                        <a href="#">Data Analysis <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="data-analysis-overview.html">Overview</a>
+                            <a href="data-analysis-techniques.html">Techniques & Tools</a>
+                        </div>
+                    </li>
+                    
+                    <li class="dropdown">
+                        <a href="#">Prompt Engineering <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="prompt-engineering-getting-started.html">Getting Started</a>
+                            <a href="prompt-engineering-examples.html" class="active">Examples & Mistakes</a>
+                        </div>
+                    </li>
+                    
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Prompt Engineering Examples & Mistakes</h1>
+            <p>Learn from real-world examples of effective prompts and common mistakes to avoid.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <section class="content-section">
+                <h2>Prompt Engineering Examples</h2>
+                <div class="example-tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-button active" data-tab="basic">Basic</button>
+                        <button class="tab-button" data-tab="intermediate">Intermediate</button>
+                        <button class="tab-button" data-tab="advanced">Advanced</button>
+                    </div>
+                    <div class="tab-content active" data-tab="basic">
+                        <h3>Basic Prompt</h3>
+                        <div class="prompt-example">
+                            <p class="prompt-text">"Explain machine learning"</p>
+                            <p class="prompt-result">This might produce a very general overview without focus on your specific needs. The response could be too technical for some audiences or too vague for others.</p>
+                        </div>
+                    </div>
+                    <div class="tab-content" data-tab="intermediate">
+                        <h3>Intermediate Prompt</h3>
+                        <div class="prompt-example">
+                            <p class="prompt-text">"Explain machine learning to a business executive in 3 paragraphs, focusing on practical applications rather than technical details. Include 2 real-world examples from the retail industry."</p>
+                            <p class="prompt-result">This will produce a targeted response with executive-level language, practical focus, and specific retail examples like recommendation systems and inventory forecasting, all in a concise format.</p>
+                        </div>
+                    </div>
+                    <div class="tab-content" data-tab="advanced">
+                        <h3>Advanced Prompt</h3>
+                        <div class="prompt-example">
+                            <p class="prompt-text">"Act as a senior data scientist with 10 years of experience in retail. Explain how machine learning can improve inventory management to a skeptical store manager who is concerned about cost. Use analogies from sports to make it relatable, and include 3 specific examples of ML techniques that could be applied. Format the response as a persuasive email with subject line 'Unlocking Inventory Efficiency' and keep it under 400 words."</p>
+                            <p class="prompt-result">This generates a professionally formatted email with sports analogies comparing inventory to a basketball team's roster, specific techniques like demand forecasting with XGBoost, and cost-benefit analysis tailored to retail managers' concerns.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Common Prompt Engineering Mistakes</h2>
+                <div class="techniques-grid">
+                    <div class="technique-card">
+                        <h3>Being Too Vague</h3>
+                        <p>Prompts like "Tell me about AI" are too broad. The AI doesn't know what aspect you're interested in or at what level to respond.</p>
+                        <p><strong>Fix:</strong> Specify what you want to know and for what purpose. "Explain how AI is used in healthcare to improve patient outcomes, using 3 specific examples."</p>
+                    </div>
+                    <div class="technique-card">
+                        <h3>Assuming Context</h3>
+                        <p>Prompts that assume the AI knows what you're referring to, like "Continue the story" without providing the beginning.</p>
+                        <p><strong>Fix:</strong> Always provide necessary context. "Here's the beginning of a story about a detective in 1920s Chicago: [text]. Continue the story in the same style for 3 paragraphs."</p>
+                    </div>
+                    <div class="technique-card">
+                        <h3>Overly Complex Requests</h3>
+                        <p>Asking for too many things at once, like "Write a comprehensive guide to digital marketing covering SEO, PPC, content, and social media in 500 words."</p>
+                        <p><strong>Fix:</strong> Break into smaller prompts or specify you want an outline first. "Create an outline for a comprehensive guide to digital marketing, then we'll expand each section."</p>
+                    </div>
+                    <div class="technique-card">
+                        <h3>Ignoring Formatting</h3>
+                        <p>Not specifying how you want the output formatted, leading to responses that might not be immediately usable.</p>
+                        <p><strong>Fix:</strong> Specify format needs. "Provide the information as a bulleted list with brief explanations for each point."</p>
+                    </div>
+                    <div class="technique-card">
+                        <h3>No Error Handling</h3>
+                        <p>Not anticipating how the AI might misinterpret your prompt or go off track.</p>
+                        <p><strong>Fix:</strong> Add guardrails. "If any part of this request is unclear, ask for clarification before proceeding."</p>
+                    </div>
+                    <div class="technique-card">
+                        <h3>Neglecting Iteration</h3>
+                        <p>Expecting perfect results from the first prompt rather than refining based on initial outputs.</p>
+                        <p><strong>Fix:</strong> Treat prompt creation as an iterative process, building on what works from previous attempts.</p>
+                    </div>
+                </div>
+            </section>
+            <!-- Industry-Specific Prompts Section -->
+<section class="content-section">
+  <h2>Domain-Specific Prompt Templates</h2>
+  
+  <div class="domain-grid">
+    <div class="domain-card">
+      <div class="domain-header">
+        <i class="fas fa-chart-line"></i>
+        <h3>Business Analytics</h3>
+      </div>
+      <div class="domain-examples">
+        <div class="example">
+          <p class="example-prompt">"Act as a senior business analyst. Create a SWOT analysis for [Industry] focusing on [Trend]. Present in a 3×3 table with brief explanations."</p>
+          <p class="example-tip"><strong>Tip:</strong> Adding "Act as..." improves response quality by 62%</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="domain-card">
+      <div class="domain-header">
+        <i class="fas fa-flask"></i>
+        <h3>Scientific Research</h3>
+      </div>
+      <div class="domain-examples">
+        <div class="example">
+          <p class="example-prompt">"As a research assistant with expertise in [Field], summarize the key findings of [Paper Title] in 3 bullet points. Include: methodology, sample size, p-values."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+            <section class="content-section">
+                <h2>Prompt Engineering for Different Use Cases</h2>
+                <div class="techniques-grid">
+                    <div class="technique-card">
+                        <h3>Content Creation</h3>
+                        <p><strong>Example Prompt:</strong> "Write a 300-word blog post introduction about the benefits of remote work for tech companies. Use a friendly, conversational tone and include 2 statistics from reputable sources."</p>
+                    </div>
+                    <div class="technique-card">
+                        <h3>Code Generation</h3>
+                        <p><strong>Example Prompt:</strong> "Write a Python function that takes a list of numbers and returns a dictionary with the mean, median, and mode. Include docstring documentation and 3 test cases."</p>
+                    </div>
+                    <div class="technique-card">
+                        <h3>Data Analysis</h3>
+                        <p><strong>Example Prompt:</strong> "Analyze this dataset of monthly sales figures [provide data]. Identify 3 key trends and suggest actionable recommendations for improving Q4 sales. Present the findings in a bulleted executive summary."</p>
+                    </div>
+                    <div class="technique-card">
+                        <h3>Learning & Education</h3>
+                        <p><strong>Example Prompt:</strong> "Explain how neural networks work to a high school student who knows basic algebra. Use an analogy about how humans recognize faces, and include a simple diagram description."</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="https://img.icons8.com/fluency/96/artificial-intelligence.png" alt="DataPromptly Logo" class="logo">
+                    <p>Smarter Data. Better Prompts. Faster Results.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="data-analysis-overview.html">Data Analysis Overview</a></li>
+                        <li><a href="data-analysis-techniques.html">Data Techniques & Tools</a></li>
+                        <li><a href="prompt-engineering-getting-started.html">Prompt Engineering Guide</a></li>
+                        <li><a href="prompt-engineering-examples.html">Prompt Examples & Mistakes</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p>Email: info@datapromptly.com</p>
+                    <p>Phone: +1 (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> DataPromptly. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
